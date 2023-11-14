@@ -1,0 +1,142 @@
+
+<User name="Khales" age={23} email="khales@khales.com" />
+     <Job salary={90000} position="Senior SDE" company="Amazon" />
+     const age = 17;
+    const isGreen = true;
+     {age >= 18 ? <h1>OVER AGE</h1> : <h1>UNDER AGE</h1>}
+    <h1 style={{color: isGreen ? "green" : "red"}}>THIS HAS COLOR</h1>
+    {isGreen && <button> THIS IS A BUTTON</button>}
+
+**Componant**
+  const Job = (props) => {
+    return (
+      <div>
+      <h1>{props.salary}</h1>
+      <h2>{props.position}</h2>
+      <h3>{props.company}</h3>
+      </div>
+    );
+  }
+
+const User = (props) => {
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      <h2>{props.age}</h2>
+      <h3>{props.email}</h3>
+    </div>
+  );
+};
+
+⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ 
+
+import { User } from './User.js';
+{ name: "Khales", age: 23 },
+    { name: "Pedro", age: 21 },
+    { name: "Jessica", age: 25},
+
+return ( 
+    <div className="App"> 
+    {users.map((user, key) => {
+      return <User name={user.name} age={user.age} />;
+    })}
+    </div>
+  );
+
+  export const User = (props) => {
+    return(
+      <div>
+        {props.name} {props.age}
+      </div>
+    );
+  };
+
+⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ 
+
+const planets = [
+    { name: "Mars", isGasPlanet: false },
+    { name: "Earth", isGasPlanet: false }, 
+    { name: "Jupiter", isGasPlanet: true },
+    {name: "Venus", isGasPlanet: false }, 
+    { name: "Neptune", isGasPlanet: true }, 
+    { name: "Uranus", isGasPlanet: true },
+  ];
+
+  return ( 
+    <div className="App"> 
+    {planets.map((planet, key) => !planet.isGasPlanet &&
+     <h1> {planet.name} </h1>
+    )}
+    </div>
+  );
+
+⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ 
+
+**States ex 1**
+  const [age, setAge] = useState(0);
+
+    const increaseAge = () => {
+      setAge(age + 1);
+    };
+
+    return ( 
+      <div className="App"> 
+        {age}
+        <button onClick={increaseAge}> Increase Age </button>
+      </div>
+    );
+
+**States ex 2**
+  const [inputValue, setInputValue] = useState("");
+
+    const handleInputChange = (event) => {
+      setInputValue(event.target.value);
+    };
+
+    <div className="App"> 
+        <input type="text" onChange={handleInputChange}/>
+        {inputValue}
+      </div>
+
+**States ex 3**
+  const [showText, setShowText] = useState(true);
+
+  <div className="App"> 
+        <button onClick={() => { 
+          setShowText(!showText);
+        }}
+          >
+            Show/Hide</button>
+        {showText && <h1> HI MY NAME IS KHALES </h1>}
+      </div>
+
+**States ex 4**
+  const [textColor, setTextColor] = useState("black");
+
+  <div className="App"> 
+      <button onClick={() => { 
+        setTextColor(textColor === "black" ? "red" : "black");
+      }}
+        >
+          Show/Hide</button>
+      <h1 style={{color: textColor }}> HI MY NAME IS KHALES </h1>
+    </div>
+
+**States Excercise**
+  const [count, setCount] = useState(0);
+
+  <div className="App"> 
+      <button onClick={()=> (
+        setCount(count +1)
+      )}>Increase</button>
+      <button onClick={()=> (
+        setCount(count - 1)
+      )}>Decrease</button>
+      <button onClick={()=> (
+        setCount(0)
+      )}>Set to Zero</button>
+
+      {count}
+    </div>
+⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ ⚡️ 
+
